@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protocolo Adiós Lipedema: guía completa para entender y manejar el lipedema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6FBF8; --surface:#E4F1EA; --card:#FFFFFF; --ink:#12302E; --muted:#4A6663;
+  --brand:#0F5C55; --brand-2:#1F8A78; --cta:#C42B5C; --cta-ink:#FFFFFF; --line:#CFE3DA;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1F1E; --surface:#143230; --card:#183A37; --ink:#E8F4EF; --muted:#A9C4BD;
+    --brand:#6CD3BE; --brand-2:#4DB8A3; --cta:#E0457A; --line:#2A524D; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1F1E; --surface:#143230; --card:#183A37; --ink:#E8F4EF; --muted:#A9C4BD;
+  --brand:#6CD3BE; --brand-2:#4DB8A3; --cta:#E0457A; --line:#2A524D; color-scheme:dark;
+}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,5.5vw,3.6rem);font-weight:800}
+h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.alt{background:var(--surface)}
+.lead{color:var(--muted);font-size:1.1rem;max-width:62ch}
+.bar{background:var(--cta);color:var(--cta-ink);text-align:center;padding:10px 16px;font-weight:700;font-size:.95rem}
+.btn{display:inline-block;background:var(--cta);color:var(--cta-ink);font-weight:700;font-size:1.1rem;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 8px 24px rgba(196,43,92,.28);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px}
+.hero{padding:48px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero ul{list-style:none;padding:0;margin:0 0 28px}
+.hero li{padding-left:30px;position:relative;margin-bottom:10px}
+.hero li:before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--brand-2);box-shadow:inset 0 0 0 4px var(--bg)}
+.timer{display:flex;gap:10px;margin:0 0 20px}
+.timer div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px;text-align:center;min-width:64px}
+.timer b{display:block;font:800 1.6rem/1 Fraunces,serif;color:var(--cta)}
+.timer span{font-size:.78rem;color:var(--muted)}
+.book{width:100%;max-width:380px;margin:0 auto;display:block;filter:drop-shadow(0 24px 30px rgba(15,92,85,.28))}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:48px;height:48px;border-radius:14px;background:var(--surface);display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:26px;height:26px;stroke:var(--brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.compare .card h3{margin-bottom:.6em}
+.compare ul{margin:0;padding-left:20px}
+.offer{background:var(--brand);color:#fff;border-radius:28px;padding:44px 28px;text-align:center}
+.offer h2{color:#fff}
+.price{font:800 3.4rem/1 Fraunces,serif;margin:8px 0}
+.price s{font-size:1.4rem;opacity:.7;font-weight:600;margin-right:10px}
+.offer .timer{justify-content:center}
+.offer .timer div{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+.offer .timer b{color:#fff}.offer .timer span{color:#D6EEE7}
+.offer ul{list-style:none;padding:0;margin:20px auto 26px;max-width:420px;text-align:left}
+.offer li{padding:6px 0 6px 28px;position:relative}
+.offer li:before{content:"✓";position:absolute;left:0;font-weight:800}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:12px 0 0;color:var(--muted)}
+.note{font-size:.88rem;color:var(--muted);max-width:80ch}
+footer{padding:36px 0 120px;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20}
+.sticky .btn{padding:12px 22px;font-size:1rem}
+.sticky small{color:var(--muted);line-height:1.2}
+.sticky strong{color:var(--cta)}
+@media (max-width:820px){
+  .hero .wrap,.grid3,.grid2,.compare{grid-template-columns:1fr}
+  .book{max-width:260px;order:-1}
+  section{padding:48px 0}
+  .sticky{display:flex}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="bar">Oferta de lanzamiento válida solo hoy: termina en <span id="t-bar">--:--:--</span></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Entiende tu lipedema y aprende a manejarlo, paso a paso</h1>
+      <p class="lead">El Protocolo Adiós Lipedema es una guía completa en español sobre diagnóstico, tratamiento conservador, alimentación antiinflamatoria y cirugía, para mejorar tu calidad de vida y llegar mejor informada a la consulta.</p>
+      <ul>
+        <li>Aprende a distinguir el lipedema de la obesidad y el linfedema</li>
+        <li>Rutinas, menús y hábitos que puedes empezar a aplicar hoy</li>
+        <li>Todo sobre compresión, drenaje linfático, ejercicio y cirugía WAL</li>
+      </ul>
+      <div class="timer" aria-label="Tiempo restante de la oferta">
+        <div><b class="h">00</b><span>horas</span></div><div><b class="m">00</b><span>minutos</span></div><div><b class="s">00</b><span>segundos</span></div>
+      </div>
+      <a class="btn" data-buy href="#oferta">Quiero el ebook ahora</a>
+    </div>
+    <svg class="book" viewBox="0 0 320 420" role="img" aria-label="Portada del ebook Protocolo Adiós Lipedema">
+      <rect x="40" y="20" width="250" height="380" rx="10" fill="#0A3F3A"/>
+      <rect x="28" y="12" width="250" height="380" rx="10" fill="#0F5C55"/>
+      <rect x="28" y="12" width="22" height="380" rx="10" fill="#0A4A44"/>
+      <circle cx="190" cy="150" r="70" fill="#1F8A78" opacity=".55"/>
+      <circle cx="225" cy="115" r="38" fill="#6CD3BE" opacity=".5"/>
+      <path d="M170 215c-34-20-42-70-10-96 22-18 52-8 60 16 8 26-6 52-30 80z" fill="#F4C9D6"/>
+      <path d="M170 215c-34-20-42-70-10-96" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <text x="64" y="258" fill="#fff" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="30">Protocolo</text>
+      <text x="64" y="294" fill="#fff" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="34">Adiós</text>
+      <text x="64" y="332" fill="#F4C9D6" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="38">Lipedema</text>
+      <text x="64" y="366" fill="#CDEBE3" font-family="Nunito Sans,sans-serif" font-size="13">Guía completa · Edición digital</text>
+    </svg>
+  </div>
+</header>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>¿Te reconoces en esto?</h2>
+    <p class="lead">El lipedema se diagnostica tarde. Según el ebook, pasan en promedio unos 10 años desde los primeros síntomas hasta el diagnóstico correcto.</p>
+    <div class="grid3">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9.5a5 5 0 0 1-10 0C7 9.500 9 7 12 3z"/></svg></div><h3>Dolor y sensibilidad al tacto</h3><p>Sensación de pesadez en piernas o brazos que empeora con el calor y con estar mucho tiempo de pie.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8 12h8M12 8v8"/></svg></div><h3>Moretones con facilidad</h3><p>Fragilidad capilar: aparecen hematomas incluso con golpes leves.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 20c0-8 3-12 7-16 4 4 7 8 7 16"/><path d="M9 20v-4M15 20v-4"/></svg></div><h3>Dietas que no funcionan</h3><p>Volumen desproporcionado y simétrico que no responde a dieta ni ejercicio convencionales, con pies y manos sin afectar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>No es sobrepeso, no es falta de voluntad</h2>
+    <p class="lead">Aprenderás a reconocer las diferencias clínicas que tu médico necesita ver.</p>
+    <div class="compare">
+      <div class="card"><h3>Lipedema</h3><ul><li>Distribución desproporcionada y bilateral</li><li>Resistente a dieta y ejercicio</li><li>Doloroso a la presión</li><li>Respeta los pies</li></ul></div>
+      <div class="card"><h3>Obesidad o linfedema</h3><ul><li>Distribución generalizada (obesidad) o unilateral (linfedema)</li><li>La obesidad responde a dieta y ejercicio</li><li>Sin dolor característico</li><li>El linfedema afecta los pies y mejora con elevación</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Lo que encontrarás dentro</h2>
+    <p class="lead">Una guía de principio a fin, con lenguaje claro y herramientas prácticas.</p>
+    <div class="grid3">
+      <div class="card"><h3>Diagnóstico y grados</h3><p>Síntomas principales, los tres grados del lipedema, pruebas clave y por qué cuesta tanto diagnosticarlo.</p></div>
+      <div class="card"><h3>Tratamiento conservador</h3><p>Terapia descongestiva, drenaje linfático manual, medias de compresión y ejercicio acuático.</p></div>
+      <div class="card"><h3>Alimentación antiinflamatoria</h3><p>Dieta RAD, alimentos recomendados y a evitar, técnicas culinarias y un menú de ejemplo.</p></div>
+      <div class="card"><h3>Cirugía y técnica WAL</h3><p>Cuándo está indicada, cómo funciona la liposucción asistida por agua, riesgos y fases del proceso.</p></div>
+      <div class="card"><h3>Recuperación</h3><p>Cronograma del postoperatorio, complicaciones frecuentes y cuidados de la compresión.</p></div>
+      <div class="card"><h3>Herramientas del día a día</h3><p>Rutina diaria, manejo del dolor, registro de síntomas y medidas, y guía para familiares.</p></div>
+      <div class="card"><h3>Apoyo emocional</h3><p>Autoestima, imagen corporal, grupos de apoyo y asociaciones de pacientes.</p></div>
+      <div class="card"><h3>Mitos y preguntas frecuentes</h3><p>Herencia, cobertura sanitaria, lipedema en hombres y mucho más.</p></div>
+      <div class="card"><h3>Comparativa de tratamientos</h3><p>Conservador frente a quirúrgico, para decidir con tu equipo médico con información clara.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="oferta">
+  <div class="wrap">
+    <div class="offer">
+      <h2>Acceso inmediato al Protocolo Adiós Lipedema</h2>
+      <p>Oferta de hoy. Mañana vuelve al precio normal.</p>
+      <div class="timer" aria-label="Tiempo restante de la oferta">
+        <div><b class="h">00</b><span>horas</span></div><div><b class="m">00</b><span>minutos</span></div><div><b class="s">00</b><span>segundos</span></div>
+      </div>
+      <div class="price"><s id="old-price">$29,90</s><span id="new-price">$9,90</span></div>
+      <ul>
+        <li>Ebook completo en PDF, descarga inmediata</li>
+        <li>Menú, rutina diaria y guías prácticas</li>
+        <li>Lectura en celular, tablet o computador</li>
+        <li>Garantía de 7 días</li>
+      </ul>
+      <a class="btn" data-buy href="#">Comprar ahora</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap" style="max-width:820px">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Este ebook cura el lipedema?</summary><p>No. El lipedema es una condición crónica. El protocolo es un camino de mejora y manejo de síntomas, no una promesa de curación.</p></details>
+    <details><summary>¿Reemplaza a mi médico?</summary><p>No. Es material informativo para que entiendas tu condición y converses mejor con tu equipo de salud. Cualquier tratamiento, suplemento o cirugía debe ser evaluado por profesionales.</p></details>
+    <details><summary>¿Cómo recibo el ebook?</summary><p>Al completar la compra recibes el enlace de descarga del PDF en tu correo.</p></details>
+    <details><summary>¿Sirve para familiares?</summary><p>Sí. Incluye una sección con recomendaciones para familiares y cuidadores.</p></details>
+    <p style="margin-top:28px"><a class="btn" data-buy href="#">Quiero el ebook</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="note"><strong>Aviso importante:</strong> este producto es de carácter informativo y educativo. No constituye diagnóstico, consejo médico ni tratamiento, y no sustituye la consulta con un profesional de la salud. Los resultados varían entre personas. Consulta a tu médico antes de cambiar tu alimentación, usar suplementos, iniciar un programa de ejercicio o someterte a una intervención.</p>
+    <p class="note">© <span id="yr"></span> Protocolo Adiós Lipedema. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <small>Oferta solo hoy<br><strong id="t-sticky">--:--:--</strong></small>
+  <a class="btn" data-buy href="#oferta">Comprar ahora</a>
+</div>
+
+<script>
+// ====== CONFIGURA AQUÍ ======
+var CONFIG = {
+  checkoutUrl: "https://pay.cakto.com.br/t3v57ii_1323912",      // enlace de pago (Cakto)
+  oldPrice: "$29,90",
+  newPrice: "$9,90"
+};
+// ============================
+(function(){
+  var p=function(n){return String(n).padStart(2,"0")};
+  document.getElementById("old-price").textContent=CONFIG.oldPrice;
+  document.getElementById("new-price").textContent=CONFIG.newPrice;
+  document.getElementById("yr").textContent=new Date().getFullYear();
+  document.querySelectorAll("[data-buy]").forEach(function(a){
+    if(CONFIG.checkoutUrl!=="#"){a.href=CONFIG.checkoutUrl}
+  });
+  function tick(){
+    var now=new Date(), end=new Date(now); end.setHours(24,0,0,0);
+    var d=Math.max(0,Math.floor((end-now)/1000));
+    var h=Math.floor(d/3600), m=Math.floor(d%3600/60), s=d%60;
+    document.querySelectorAll(".h").forEach(function(e){e.textContent=p(h)});
+    document.querySelectorAll(".m").forEach(function(e){e.textContent=p(m)});
+    document.querySelectorAll(".s").forEach(function(e){e.textContent=p(s)});
+    var t=p(h)+":"+p(m)+":"+p(s);
+    document.getElementById("t-bar").textContent=t;
+    document.getElementById("t-sticky").textContent=t;
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
